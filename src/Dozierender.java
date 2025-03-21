@@ -48,11 +48,14 @@ public class Dozierender {
         if(behalten) {
             this.feedback.add(feedback);
             System.out.println("Feedback wird behalten");
-            System.out.println("Das sind alle Feedbacks, die bis jetzt bealten worden: " + this.feedback);
         } else {
             System.out.println("Feedback wird nicht behalten");
         }
         
         
+    }
+
+    public void getFeedback() {
+        System.out.println("Feedback: " + feedback);
     }
 }
