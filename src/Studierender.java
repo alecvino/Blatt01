@@ -40,8 +40,9 @@ public class Studierender {
 
     }
 
-    public void sprechstundenAnfrage(Dozierender dozierender, String anliegen, LocalDate date, LocalTime time, Studierender studierender) {
-        System.out.println("Sprechstundenanfrage an: " + dozierender.getName() + "\nAnliegen: " + anliegen + "\nDatum: " + date + "\nUhrzeit: " + time + "\nVon: " + studierender.getName());
+    public void sprechstundenAnfrage(Dozierender dozierender, String anliegen, String wochentag, LocalDate datum, LocalTime time, Studierender studierender) {
+        System.out.println("Sprechstundenanfrage an: " + dozierender.getName() + "\nAnliegen: " + anliegen + "\nWochentag: " + wochentag + "\nDatum: " + datum + "\nUhrzeit: " + time + "\nVon: " + studierender.getName());
+        dozierender.sprechstundenAntwort(datum, time);
     }
 
 }

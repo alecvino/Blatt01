@@ -8,26 +8,29 @@ public class Lehrveranstaltung {
     private Vorlesungsstunde vorlesungsstunden;
     private Praktikumsstunde praktikumsstunde;
 
-    ArrayList<String> teilnehmerliste = new ArrayList();
+    ArrayList<String> teilnehmerliste = new ArrayList<>();
 
-    public Lehrveranstaltung(String titel, String dozierende, String studierende, Vorlesungsstunde vorlesungsstunden, Praktikumsstunde praktikumsstunde) {
+    public Lehrveranstaltung(String titel, String dozierende, String studierende) {
         this.titel = titel;
         this.dozierende = dozierende;
         this.studierende = studierende;
-        this.vorlesungsstunden = vorlesungsstunden;
-        this.praktikumsstunde = praktikumsstunde;
     }
 
-    public void hinzufuegen(Studierender studierender) {
+
+    public void studierenderHinzufuegen(Studierender studierender) {
         teilnehmerliste.add(studierender.getName());
         System.out.println("Studierender hinzugefügt: " + studierender.getName());
     }
 
-     public void entfernen(Studierender studierender) {
+     public void StudierenderEntfernen(Studierender studierender) {
         teilnehmerliste.remove(studierender.getName());
      }
 
     public void getTeilnehmerliste() {
         System.out.println("Teilnehmerliste: " + teilnehmerliste);
+    }
+
+    public void getDetails() {
+        System.out.println("Titel: " + titel + "\nDozierende: " + dozierende + "\nStudierende: " + studierende);
     }
 }
